@@ -1,0 +1,141 @@
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            /* background: linear-gradient(#00BFFF, white); */
+            /* background: gray; */
+            background-color: rgb(180, 180, 180);
+            min-height: 100vh;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card-link:hover .card {
+            transform: scale(1.02);
+            transition: 0.3s ease;
+        }
+
+        .card {
+            width: 300px;
+            height: 420px;
+            background-color: #ffffffa8;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            color: blue;
+            font-size: 20px;
+            margin: 10px 15px 5px 15px;
+            text-align: center;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 2px 15px;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        .card p:last-child {
+            margin-bottom: 10px;
+        }
+        .card {
+            position: relative; 
+        }
+
+        .rating {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: gold;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
+        .price{
+            position: absolute;
+            bottom: 13px;
+            left: 10px;
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
+        }
+
+        .label {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 0 10px gray;
+            width: 60%;
+            margin: 30px auto 20px;
+        }
+
+        .label h1 {
+            margin: 0;
+            color: rgb(0, 0, 0);
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #00000050;
+        }
+
+        .logout-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .logout-button form {
+            display: inline;
+        }
+
+        .logout-button button {
+            background-color: #ff4d4d;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .logout-button button:hover {
+            background-color: #e60000;
+        }
+

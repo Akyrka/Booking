@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Пошук бронювання</title>
+    <link rel="stylesheet" href="{% static 'css/search_info.css' %}">
+    <style>
+
+
+        .logout-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-info"> 
+        <h1>Пошук бронювання по клієнту</h1>
+
+        <form method="POST" action="{% url 'search_info' %}">
+            {% csrf_token %}
+            <input type="text" name="first_name" placeholder="Ім'я" value="{{ first_name }}">
+            <input type="text" name="last_name" placeholder="Прізвище" value="{{ last_name }}"><br>
+
+            <button type="submit">Пошук</button>
+            <button type="button" onclick="window.location.href='{% url 'search_info' %}'">Очистити</button>
+        </form>
+
+        {% if results != None %}
+            <h2>Результати:</h2>
+            {% if results %}
+                <ul class="results-list">
+                    {% for booking in results %}
+                        <li>
+                            <strong>Ім'я:</strong> {{ booking.customer.first_name }}<br>
+                            <strong>Прізвище:</strong> {{ booking.customer.last_name }}<br> 
+                            <strong>Номер кімнати:</strong> {{ booking.room.number }}<br>
+                            <strong>Заселення:</strong> {{ booking.start_time }}<br> 
+                            <strong>Виїзд:</strong> {{ booking.end_time }}
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            {% else %}
+                <p>Нічого не знайдено.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <div class="logout-button">    
+        <form method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            <button type="submit">Повернутись</button> 
+        </form>
+    </div>
+</body>
+</html>

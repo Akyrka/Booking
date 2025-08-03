@@ -1,0 +1,83 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(180, 180, 180);
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-info {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color:darkgrey;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            margin: 10px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        button:hover{
+            background-color: gray;
+        }
+
+        .logout-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .logout-button form {
+            display: inline;
+        }
+
+        .logout-button button {
+            background-color: #ff4d4d;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .logout-button button:hover {
+            background-color: #e60000;
+        }
+
+
+        .results-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.results-list li {
+    background-color: #e0f7fa;
+    border-left: 5px solid #00acc1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-size: 16px;
+    line-height: 1.5;
+}

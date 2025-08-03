@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кімната зайнята</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5 text-center">
+        <h1 class="text-danger mb-4">Кімната вже зайнята</h1>
+
+        <div class="accordion accordion-flush shadow" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed text-danger fw-bold" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                            aria-expanded="false" aria-controls="flush-collapseOne">
+                        ERROR: Забронювати неможливо
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        Кімната вже зайнята на вибрані дати. Спробуйте обрати іншу кімнату або змініть дату.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="{% url 'home' %}" class="btn btn-outline-secondary mt-4">Повернутись на головну</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

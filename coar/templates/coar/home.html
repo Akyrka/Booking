@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Кімнати</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="label">
+        <h1>Номери готелю - "Укріїна"</h1>
+    </div>
+
+    <div class="cards-container">
+
+        <a class="card-link" href="{% url 'info' %}?room_id=1">
+            <div class="card">
+                <img src="https://st2.depositphotos.com/1000975/11773/i/450/depositphotos_117733132-stock-photo-modern-hotel-room-with-big.jpg" alt="Standard room" />
+                <h2>Стандарт 👤 - 2</h2>
+                <p><strong>Заселення:</strong> 12:00</p>
+                <p><strong>Прибирання:</strong> 🧹 Відсутнє</p>
+                <p><strong>Їжа:</strong> 🍽️ Відсутня</p>
+                <p><strong>Виїзд:</strong> 11:00</p>
+                <div class="price">UAH 1550</div>
+                <div class="rating">⭐ 4.8</div>
+
+            </div>
+        </a>
+
+        <a class="card-link" href="{% url 'info' %}?room_id=2">
+            <div class="card">
+                <img src="https://static5.depositphotos.com/1001540/504/i/450/depositphotos_5045505-stock-photo-luxurious-hotel.jpg" alt="Lux room" />
+                <h2>Люкс 👤 - 3</h2>
+                <p><strong>Заселення:</strong> 12:00</p>
+                <p><strong>Прибирання:</strong> 🧹 Відсутнє</p>
+                <p><strong>Їжа:</strong> 🍽️ Увімкнена</p>
+                <p><strong>Виїзд:</strong> 11:00</p>
+                <div class="price">UAH 3100</div>
+                <div class="rating">⭐ 4.1</div>
+
+            </div>
+        </a>
+
+        <a class="card-link" href="{% url 'info' %}?room_id=3">
+            <div class="card">
+                <img src="https://chillax.com.ua/wp-content/uploads/2023/02/chalet-1-610x300.jpg" alt="VIP room" />
+                <h2>Віп 👤 - 4</h2>
+                <p><strong>Заселення:</strong> 11:00</p>
+                <p><strong>Прибирання:</strong> 🧹 Увімкнена</p>
+                <p><strong>Їжа:</strong> 🍽️ Увімкнена</p>
+                <p><strong>Виїзд:</strong> 10:00</p>
+                <div class="price">UAH 4550</div>
+                <div class="rating">⭐ 4.5</div>
+
+            </div>
+        </a>
+        <!-- <a class="card-link" href="{% url 'info' %}?room_id=3">
+            <div class="card">
+                <img src="https://chillax.com.ua/wp-content/uploads/2023/02/chalet-1-610x300.jpg" alt="VIP room" />
+                <h2>Віп 👤 - 4</h2>
+                <p><strong>Заселення:</strong> 11:00</p>
+                <p><strong>Прибирання:</strong> 🧹 Увімкнена</p>
+                <p><strong>Їжа:</strong> 🍽️ Увімкнена</p>
+                <p><strong>Виїзд:</strong> 10:00</p>
+                <div class="price">UAH 4550</div>
+                <div class="rating">⭐ 4.5</div>
+
+            </div>
+        </a>
+        <a class="card-link" href="{% url 'info' %}?room_id=3">
+            <div class="card">
+                <img src="https://chillax.com.ua/wp-content/uploads/2023/02/chalet-1-610x300.jpg" alt="VIP room" />
+                <h2>Віп 👤 - 4</h2>
+                <p><strong>Заселення:</strong> 11:00</p>
+                <p><strong>Прибирання:</strong> 🧹 Увімкнена</p>
+                <p><strong>Їжа:</strong> 🍽️ Увімкнена</p>
+                <p><strong>Виїзд:</strong> 10:00</p>
+                <div class="price">UAH 4550</div>
+                <div class="rating">⭐ 4.5</div>
+
+            </div>
+        </a>
+        <a class="card-link" href="{% url 'info' %}?room_id=3">
+            <div class="card">
+                <img src="https://chillax.com.ua/wp-content/uploads/2023/02/chalet-1-610x300.jpg" alt="VIP room" />
+                <h2>Віп 👤 - 4</h2>
+                <p><strong>Заселення:</strong> 11:00</p>
+                <p><strong>Прибирання:</strong> 🧹 Увімкнена</p>
+                <p><strong>Їжа:</strong> 🍽️ Увімкнена</p>
+                <p><strong>Виїзд:</strong> 10:00</p>
+                <div class="price">UAH 4550</div>
+                <div class="rating">⭐ 4.5</div>
+
+            </div>
+        </a> -->
+
+        
+
+    {% if user.is_authenticated %}
+        <div class="logout-button">
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Вийти</button>
+            </form>
+            <form method="post" action="{% url 'search_info'%}">
+                {% csrf_token %}
+                <button type="submit">Знайти бронювання</button> 
+            </form>
+        </div>
+    {% endif %}
+
+
+</body>
+</html>
