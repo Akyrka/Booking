@@ -1,0 +1,126 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;  /* по горизонтали */
+    align-items: center;      /* по вертикали */
+    /* background: linear-gradient(#00BFFF, white); */
+    background: gray;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    background-color: white;
+    padding: 20px 30px;
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+    box-sizing: border-box;
+}
+
+/* label{
+    font-weight: bold;
+    color: #086A94;
+} */
+
+input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px 10px;
+    border: 1.5px solid #00BFFF;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    color: #333;
+}
+
+input:focus {
+    border-color: #0084C4;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: darkgray;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+
+button:hover {
+    background-color: gray;
+}
+
+.back-button {
+    display: block;
+    margin: 10px auto 0; /* Отступ сверху 10px, по центру по горизонтали */
+    padding: 10px 20px;
+    background-color:darkgray; /* Темно-красный фон */
+    color: black; /* Голубой цвет текста */
+    border-radius: 8px;
+    text-decoration: none; /* Убирает подчеркивание */
+    font-weight: bold;
+    text-align: center;
+    width: 93%; /* Занимает всю ширину родителя */
+}
+
+.back-button:hover {
+    /* /* text-decoration: underline; */
+    background: gray;
+}
+
+a {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #00BFFF;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+ /* body {
+            background-color: antiquewhite;
+        }
+        form {
+            background-color: coral;
+            padding: 20px;
+            width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+        input {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a{
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: white;
+            color: red;
+            border-radius: 5px;
+            
+        }  */
