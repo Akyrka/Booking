@@ -7,20 +7,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
+
 def home(request):
     return render(request, "coar/home.html")
-
-# def info(request):
-#     if request.method=="POST":
-#         first_name = request.POST.get("first_name")
-#         last_name = request.POST.get("last_name")
-#         gmail = request.POST.get("gmail")
-#         phone = request.POST.get("phone")
-#         if first_name and last_name and gmail and phone:
-#             Customer.objects.create(first_name=first_name, last_name=last_name,gmail=gmail,phone=phone)
-#             return redirect("Дякуем")
-#     return render(request, "coar/info.html")
-
 
 
 @login_required

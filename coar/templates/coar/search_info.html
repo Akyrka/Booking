@@ -37,7 +37,7 @@
                         <li>
                             <strong>Ім'я:</strong> {{ booking.customer.first_name }}<br>
                             <strong>Прізвище:</strong> {{ booking.customer.last_name }}<br> 
-                            <strong>Номер кімнати:</strong> {{ booking.room.number }}<br>
+                            <strong>Номер і класс кімнати:</strong> {{ booking.room.number }} , {{booking.room.type}}<br>
                             <strong>Заселення:</strong> {{ booking.start_time }}<br> 
                             <strong>Виїзд:</strong> {{ booking.end_time }}
                         </li>

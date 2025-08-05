@@ -28,7 +28,8 @@
 
             <input type="hidden" name="room_id" value="{{ room.id }}">
 
-            <label>Номер кімнати</label><br>
+            <label>Класс та номер кімнати</label><br>
+            <input type="text" name="room_type" value="{{ room.type }}">
             <input type="text" name="number" value="{{ room.number }}" readonly><br><br>
 
             <label>Дата реєстрації номеру</label><br>

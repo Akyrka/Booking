@@ -5,6 +5,7 @@
             /* background: linear-gradient(#00BFFF, white); */
             /* background: gray; */
             background-color: rgb(180, 180, 180);
+            /* background-color: rgba(211, 211, 211, 0.755); */
             min-height: 100vh;
         }
 
@@ -49,7 +50,7 @@
         }
 
         .card h2 {
-            color: blue;
+            color: rgb(0, 0, 0);
             font-size: 20px;
             margin: 10px 15px 5px 15px;
             text-align: center;

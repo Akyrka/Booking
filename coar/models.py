@@ -15,6 +15,7 @@ class Customer(models.Model):
 class Room(models.Model):
     number = models.CharField(max_length=100)
     peopl = models.CharField(max_length=10)
+    type = models.CharField(max_length=100)
     
 
     def __str__(self):
